@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">SuppOn</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="tela-cadastro">
+        <h1>Cadastro</h1>
+        <input type="text" placeholder="Email">
+        <br><br>
+        <input type="text" placeholder="Confirmar mail">
+        <br><br><br>
+        <input type="password" placeholder="Senha">
+        <br><br>
+        <input type="password" placeholder="Confirmar senha">
+        <br><br><br>
+        <button id="finalizarButton">Finalizar</button>
+    </div>
+    <footer></footer>
+    <script>
+        document.getElementById("finalizarButton").addEventListener("click", function () {
+            // Redireciona para a página desejada quando o botão "Finalizar" é clicado
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">SuppOn</a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    <div class="tela-login">
+        <h1>Login</h1>
+        <input type="text" placeholder="Email">
+        <br><br>
+        <input type="password" placeholder="Senha">
+        <br><br><br>
+        <button id="entrarButton">Entrar</button>
+        <h2>Não tem conta?<a href="cadastro.html">Clique aqui</a></h2> 
+    </div>
+
+    <footer></footer>
+</body>
+<script>
+    document.getElementById("entrarButton").addEventListener("click", function() {
+        // Redireciona para a página desejada quando o botão "Entrar" é clicado
+        window.location.href = "home.html";
+    });
+</script>
+</html>

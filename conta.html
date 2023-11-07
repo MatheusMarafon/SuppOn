@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conta</title>
     <link rel="stylesheet" href="conta.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -17,13 +19,51 @@
                 </ul>
             </nav>
     </header>
+    <div id="profile-picture">
+        <img src="img/profile1.png" alt="Profile picture">
+        <a href="#">Editar</a>
+    </div>
     <div class="tela-conta">
         <input type="text" placeholder="Email">
         <br><br><br>
         <input type="password" placeholder="Senha">
-        <h1>Alterar senha</h1>
+        <h1 id="alterarSenhaBtn">Alterar senha</h1>
+        <div id="formAlterarSenha" class="alterar-senha"></div>
     </div>
     <footer></footer>
+    <script>
+        document.getElementById('alterarSenhaBtn').addEventListener('click', function () {
+            var divSenha = document.getElementById('formAlterarSenha');
 
+            // Verifica se os campos já foram criados
+            if (!divSenha.hasChildNodes()) {
+                // Criação dos campos "Nova senha" e "Confirmar senha"
+                var novaSenhaInput = document.createElement('input');
+                novaSenhaInput.type = 'password';
+                novaSenhaInput.placeholder = 'Nova senha';
+
+                var confirmarSenhaInput = document.createElement('input');
+                confirmarSenhaInput.type = 'password';
+                confirmarSenhaInput.placeholder = 'Confirmar senha';
+
+                // Adiciona os campos à div de alteração de senha
+                divSenha.appendChild(novaSenhaInput);
+                divSenha.appendChild(document.createElement('br'));
+                divSenha.appendChild(document.createElement('br'));
+                divSenha.appendChild(confirmarSenhaInput);
+                divSenha.appendChild(document.createElement('br'));
+                divSenha.appendChild(document.createElement('br'));
+
+                // Adiciona um botão "Salvar"
+                var salvarBtn = document.createElement('button');
+                salvarBtn.innerText = 'Salvar';
+                salvarBtn.addEventListener('click', function () {
+                    // Remove os campos e o botão quando o botão "Salvar" é clicado
+                    divSenha.innerHTML = '';
+                });
+                divSenha.appendChild(salvarBtn);
+            }
+        });
+    </script>
 </body>
 </html>

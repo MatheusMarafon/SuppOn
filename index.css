@@ -4,7 +4,12 @@
   
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav ul li a { 
+    color: white;
+    text-decoration: none;
 }
 header {     /*cabecalho*/
     background-color: #2E3038;
